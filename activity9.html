@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-screen h-screen flex flex-col justify-between">
+    <nav class="flex justify-center items-center bg-red-100">
+        <div class="flex flex-col gap-3 p-4 text-stone-700">
+            <div class="gap-8 flex text-sm cursor-pointer">
+                <a href="#">Home</a><a href="#">About</a><a href="#" id="toggleContact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="flex py-10 px-40 gap-8 flex-grow">
+        <div class="w-full h-full">
+            <img src="https://plus.unsplash.com/premium_photo-1670282392820-e3590c1c5c54?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="500px" height="500px"/>
+        </div>
+        <div class="h-full">
+            <h3 class="text-lg font-thin line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolore laborum corporis consequatur eaque, esse, rem voluptatem numquam nostrum reiciendis sapiente praesentium neque aliquam, nulla inventore assumenda soluta. Vero, omnis?
+            </h3>
+        </div>
+    </div>
+    <div class="max-w-[90%] w-full mx-auto hidden" id="contact">
+        <form action="" id="form" class="mt-6">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="outline-none border-stone-700 border px-6 py-2"/>
+        </form>
+    </div>
+    <footer class="bg-gray-900 text-white text-center p-4 mt-10">
+        <p>&copy; 2025 Your Website. All Rights Reserved.</p>
+    </footer>
+    <script>
+        let toggleContact = document.getElementById("toggleContact");
+        let contact = document.getElementById("contact");
+        
+        toggleContact.addEventListener("click", function(event) {
+            event.preventDefault();
+            contact.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
